@@ -1,0 +1,62 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+		controllerName="flight_app_201.controller.main" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Flights">
+		<content>
+			<table id="flightsTable" items="{/flightSet}" growing= "true"
+			growinScrollToLoad="true">
+					<columns>
+						<Column>
+							<Text text ="Airline ID" />
+						</Column>
+						<Column>
+							<Text text ="Connection ID" />
+						</Column>
+						<Column>
+							<Text text ="Date" />
+						</Column>
+						<Column>
+							<Text text ="Price" />
+						</Column>
+						<Column>
+							<Text text ="Currency" />
+						</Column>
+						<Column>
+							<Text text ="Plane Type" />
+						</Column>
+						<Column>
+							<Text text ="Max. Seats" />
+						</Column>
+						<Column>
+							<Text text ="Booked Seats" />
+						</Column>
+						<Column>
+							<Text text ="Payment Sum" />
+						</Column>
+					</columns>
+				<items>
+					<ColumnListItem>
+						<cells>
+							<text text="{Carrid}"/>
+							<text text="{Connid}"/>
+							<text text="{Fldate}"/>
+							<text text="{Price}"/>
+							<text text="{Currency}"/>
+							<text text="{Planetype}"/>
+							<text text="{Seatsmax}"/>
+							<text text="{Seatsocc}"/>
+							<text text="{Paymentsum}"/>
+						</cells>
+					</ColumnListItem>
+				</items>
+			</table>
+		</content>
+			<Footer>
+				<Bar>
+					<contentLeft>
+						<Button text= "Create New FLight" type="Accept" press="createPopup"/>
+					</contentLeft>
+				</Bar>
+			</Footer>
+		
+	</Page>
+</core:View>

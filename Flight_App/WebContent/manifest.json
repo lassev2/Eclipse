@@ -1,0 +1,48 @@
+{
+
+"sap.app":{
+	"_version": "1.1.0",
+	"id": "flight_app_201",
+	"type": "application",
+	"applicationVersion": {
+		"version": "1.1.0"}
+		, 
+		"title": "flight Monitor"
+		},
+		"sap.ui5": {
+		"rootView":{
+			"viewName": "Flight_app_201.view.main",
+			"type": "XML",
+			"async": true
+		},
+		"models": {
+			"Settings":{
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/applicationProperties.json"
+				}
+			},
+			"routing" :{
+				"config":{
+					"viewPath": "flight_app_201_view",
+					"controlAggregation": "pages",
+					"routerClass": "sap.m.routing.Router",
+					"viewType": "XML",
+					"transition": "slide",
+					"async": true
+					},
+					"routes":[{
+						"pattern": "",
+						"name": "home",
+						"target": "home"
+						}],
+					"targets": {
+						"home": {
+							"viewId": "main",
+							"viewName": "main",
+							"controlId": "app",
+							"viewLevel": 1
+				}
+			}	
+		}
+	}			
+}
